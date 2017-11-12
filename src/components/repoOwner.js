@@ -32,12 +32,12 @@ class RepoOwner extends React.Component{
 
     componentDidMount(){ 
         let username = this.props.match.params.username;
-        axios.get('https://api.github.com/search/users?access_token=7a5213c3d14dab9b511a1cb32fad42bf462aa9e2&q='+username)
+        axios.get('https://api.github.com/search/users?q='+username)
             .then(res => {
                var userinfo = res.data.items;
                userinfo.repoList = [];
                userinfo.slice(0,3).map(user => {
-                    axios.get(user.repos_url+'?access_token=7a5213c3d14dab9b511a1cb32fad42bf462aa9e2')
+                    axios.get(user.repos_url)
                     .then(res => {
                         var repoList = res.data;
                         user.repoList = repoList.slice(0,3);
