@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
 import Home from 'material-ui/svg-icons/action/home';
 import Back from 'material-ui/svg-icons/hardware/keyboard-backspace';
+import Profile from 'material-ui/svg-icons/social/person';
 
 const iconStyles = {
       'margin-right' : '4px',
@@ -45,6 +46,7 @@ class TechScanHeader extends React.Component {
 
     render() {     
          let searchIcon = <div>
+                        <a href="https://www.linkedin.com/in/aravindh-nagarajan-58b91191/" target="_blank"> <Profile color="white" className="material-icons" style={iconStyles} /> </a>
                         <Home color="white" toolTip="Home" className="material-icons" style={iconStyles} onClick={this.navigateToHome.bind(this)}/>
                         <Back color="white" Tooltip="Back" className="material-icons" style={iconStyles} onClick={this.goBack.bind(this)}/>
                         <Search color="white" className="material-icons" style={iconStyles}/><TextField
