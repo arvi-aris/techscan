@@ -14,11 +14,11 @@ const iconStyles = {
 };
 
 const headerStyle = {
-    'background-color' : 'rgb(5, 86, 96)'
+    'background-color' : 'rgb(15, 5, 96)'
 }
 
 const hintStyle = {
-    color: '#8cc9a4'
+    color: 'rgb(187, 221, 232)'
 }
 
 class TechScanHeader extends React.Component {

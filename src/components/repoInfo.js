@@ -7,8 +7,8 @@ import FlatButton from 'material-ui/FlatButton';
 import {Link} from 'react-router-dom';
 
 const styles = {
-    width: 300,
-    height: 450,
+    width: 280,
+    height: 500,
     margin: '25px',
     display: 'block',
     float:'left',
