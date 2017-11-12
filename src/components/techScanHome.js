@@ -16,8 +16,8 @@ class TechScanHome extends React.Component{
         return(
             <div>
                 <header>
-                    <Route exact path='*' render={({history})  => (
-                        <TechScanHeader  history={history}/>
+                    <Route exact path='*' render={({history,location})  => (
+                        <TechScanHeader  history={history} location={location} />
                     )}/>
                 </header>
                 <main>

@@ -18,7 +18,7 @@ class RepoList extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            categories : ['javascript','java','ruby','python','c','angularjs','reactjs','nodejs','go']
+            categories : ['javascript','java','ruby','python','c','angularjs','reactjs','nodejs','go','meteor','django','typescript']
         }
     }
     render(){

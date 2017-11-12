@@ -4,11 +4,13 @@ import Search from 'material-ui/svg-icons/action/search';
 import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
 import Home from 'material-ui/svg-icons/action/home';
+import Back from 'material-ui/svg-icons/hardware/keyboard-backspace';
 
 const iconStyles = {
       'margin-right' : '4px',
       'margin-left' : '5px',
-    'margin-bottom' : '-8px'
+    'margin-bottom' : '-8px',
+    'cursor' : 'pointer'
 };
 
 const headerStyle = {
@@ -29,6 +31,14 @@ class TechScanHeader extends React.Component {
       },100);
     }
 
+    goBack(){
+        var currentLocation = this.props.location.pathname.split('/');
+        (currentLocation.length > 1) ? currentLocation.splice(currentLocation.length-1,1).push('/') : currentLocation;
+        currentLocation = currentLocation.join("");
+        this.props.history.push('/');
+        this.props.history.push(currentLocation);
+    }
+
     navigateToHome(){
         this.props.history.push('/');
     }
@@ -36,6 +46,7 @@ class TechScanHeader extends React.Component {
     render() {     
          let searchIcon = <div>
                         <Home color="white" toolTip="Home" className="material-icons" style={iconStyles} onClick={this.navigateToHome.bind(this)}/>
+                        <Back color="white" Tooltip="Back" className="material-icons" style={iconStyles} onClick={this.goBack.bind(this)}/>
                         <Search color="white" className="material-icons" style={iconStyles}/><TextField
                         hintText="Search here.. (Repositaryname)"
                         id="searchTxt"
